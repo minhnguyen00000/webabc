@@ -13,7 +13,7 @@ if($stmt->fetchColumn(0)>0)
   //echo "Dang nhap thanh cong";
 ?>
 <script language="javascript">
-  alert("Đăng nhập thành công");
+  alert("Đăng nhập không thành công");
   location.href="index.php";
 </script>
 <?php
