@@ -4,7 +4,7 @@ if(isset($_POST['btndangnhap']))
 
   $sql="select count(*) from khachhang where taikhoan=:taikhoan and matkhau=md5(:matkhau) and tinhtrang=0";
   $stmt=$pdo->prepare($sql);
-  $para=array("taikhoan"=>$_POST['taikhoan'],"matkhau"=>$_POST['']);
+  $para=array("taikhoan"=>$_POST['taikhoan'],"matkhau"=>$_POST['matkhau']);
   $stmt->execute($para);
   
 if($stmt->fetchColumn(0)>0)
@@ -19,7 +19,7 @@ if($stmt->fetchColumn(0)>0)
 <?php
 }
 else
-  $error = "Đăng nhập không thành công";
+  $error = "Đăng nhập thành công";
 
 }
 ?>
